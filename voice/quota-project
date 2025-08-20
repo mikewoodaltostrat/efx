@@ -1,0 +1,2 @@
+#!/bin/sh
+gcloud auth application-default set-quota-project $1

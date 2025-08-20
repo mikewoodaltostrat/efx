@@ -1,0 +1,68 @@
+{
+  "name": "00000000-0000-0000-0000-000000000000",
+  "displayName": "Default Start Flow",
+  "description": "A start flow created along with the agent",
+  "transitionRoutes": [ {
+    "intent": "test",
+    "triggerFulfillment": {
+      "messages": [ {
+        "outputAudioText": {
+          "ssml": "\u003cspeak\u003e\n    \u003cvoice name=\"en-US-Standard-A\"\u003e\nTesting the cost implications of changing voices.\n    \u003c/voice\u003e\n\u003c/speak\u003e"
+        },
+        "languageCode": "en"
+      }, {
+        "text": {
+          "text": [ "standard" ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "targetPage": "Start Page",
+    "name": "ced825e0-d874-494d-8916-1156443738a9",
+    "description": "test"
+  }, {
+    "intent": "Default Welcome Intent",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Hi! How are you doing?", "Hello! How can I help you?", "Good day! What can I do for you today?", "Greetings! How can I assist?" ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "name": "536e1eaf-8d76-42c7-8878-c29ac207d4bd"
+  } ],
+  "eventHandlers": [ {
+    "event": "sys.no-match-default",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "NO MATCH" ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "name": "6160141c-5ab1-4c98-a529-90c73317d4cf"
+  }, {
+    "event": "sys.no-input-default",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "NO ENTRY" ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "name": "6d470e31-bdbd-49c9-bfcb-f63cdbe80f64"
+  } ],
+  "nluSettings": {
+    "modelType": "MODEL_TYPE_ADVANCED",
+    "classificationThreshold": 0.30000001
+  },
+  "nluSettingsList": [ {
+    "modelType": "MODEL_TYPE_ADVANCED",
+    "classificationThreshold": 0.30000001,
+    "customConfigKey": "b6b9870c-e1bf-470c-80e7-c5ba542d43e1",
+    "languageCode": "en"
+  } ]
+}

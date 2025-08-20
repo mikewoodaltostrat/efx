@@ -1,0 +1,9 @@
+#!/bin/sh
+export PROJECT_ID="efx-dialogflow-standard"
+export LOCATION="us-central1"
+
+curl -s -X GET \
+-H "Authorization: Bearer $(gcloud auth print-access-token)" \
+-H "x-goog-user-project: $PROJECT_ID" \
+"https://$LOCATION-dialogflow.googleapis.com/v3/projects/$PROJECT_ID/locations/$LOCATION/agents" \
+| jq '.agents[] | {name, displayName}'

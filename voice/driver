@@ -1,0 +1,19 @@
+#!/bin/sh
+
+# test driver to ensure tests are controlled and can achieve the proper comparison
+
+gcloud auth application-default set-quota-project efx-dialogflow-standard
+for i in {1..5}
+do
+    echo "Standard Iteration $i"
+    python3 voice_test.py --voice 0 --num-requests 400
+    sleep 60
+done
+
+gcloud auth application-default set-quota-project efx-dialogflow-neural2
+for i in {1..5}
+do
+    echo "Neural Iteration $i"
+    python3 voice_test.py --voice 1 --num-requests 400
+    sleep 60
+done

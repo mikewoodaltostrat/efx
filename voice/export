@@ -1,0 +1,3 @@
+#!/bin/sh
+cxcli agent export voice --project-id efx-dialogflow-standard --location-id us-central1 --export-format json --output-file voice_agent_standard.zip
+cxcli agent export voice --project-id efx-dialogflow-neural2 --location-id us-central1 --export-format json --output-file voice_agent_neural2.zip
