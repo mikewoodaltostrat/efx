@@ -43,10 +43,6 @@ async def send_single_request(
             sample_rate_hertz=16000, # Match your 16kHz file
             model='telephony_short'  # A great model for short, 16kHz commands
         )
-        #audio_config = dialogflow.InputAudioConfig(
-        #    audio_encoding=dialogflow.AudioEncoding.AUDIO_ENCODING_LINEAR_16,
-        #    sample_rate_hertz=22050,
-        #)
 
         # 3. Create the audio query input
         query_input = dialogflow.QueryInput(
